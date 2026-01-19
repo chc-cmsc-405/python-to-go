@@ -4,6 +4,7 @@ You already know Python. This guide helps you learn Go by showing side-by-side c
 
 ## How to Use This Guide
 
+- **[Reading Guide](reading-guide.md)** — Phase-aligned reading assignments for CMSC-405
 - **Quick Reference** — This README has dense comparison tables for quick lookup
 - **Deep Dive** — Individual pages (linked below) cover specific topics in detail with code examples
 - **Side-by-Side** — Python code on the left, Go on the right
@@ -155,7 +156,7 @@ For more examples and in-depth explanations, see:
 | [02 - Data Types](02-data-types.md) | Types, zero values, type conversion |
 | [03 - Operators](03-operators.md) | Arithmetic, comparison, logical |
 | [04 - Control Flow](04-control-flow.md) | If/else, for, switch |
-| [05 - Data Structures](05-data-structures.md) | Slices, maps, strings |
+| [05 - Data Structures](05-data-structures.md) | Slices, maps, strings, file I/O |
 | [06 - Functions](06-functions.md) | Definition, multiple returns, variadic, closures |
 | [07 - Structs & Interfaces](07-structs-interfaces.md) | Structs, methods, interfaces, composition |
 | [08 - Unique Features](08-unique-features.md) | Goroutines, channels, error handling, defer |
