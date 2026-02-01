@@ -2,9 +2,25 @@
 
 [← Back to Go Guide](README.md)
 
-Go provides slices (dynamic arrays) and maps (key-value). Slices are the most commonly used. Maps are built into the language.
+Go provides arrays (fixed-size), slices (dynamic), and maps (key-value). Slices are the most commonly used—arrays are rare in practice.
 
 ---
+
+## Arrays
+
+Go arrays have a fixed size that's part of the type. `[5]int` and `[10]int` are different types.
+
+```go
+var numbers [5]int                    // Zero-initialized array of 5 ints
+scores := [3]int{95, 87, 92}          // Array with values
+names := [...]string{"Alice", "Bob"}  // Size inferred from values (2)
+
+fmt.Println(len(scores))  // 3
+fmt.Println(scores[0])    // 95
+// scores = append(scores, 100)  // Error! Can't append to arrays
+```
+
+**When to use:** Arrays are rarely used directly in Go. Prefer slices for most cases.
 
 ## Slices
 
