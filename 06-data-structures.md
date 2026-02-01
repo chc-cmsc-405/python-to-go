@@ -78,6 +78,49 @@ fmt.Println(strings.Contains(text, "World"))
 fmt.Println(strings.ToUpper(text))
 ```
 
+## Character Functions
+
+Go provides character functions in the `unicode` package. In Python, these are methods on strings. In Go, they're functions that take a `rune` (Go's character type).
+
+| Task | Python | Go |
+|------|--------|-----|
+| **Is letter?** | `c.isalpha()` | `unicode.IsLetter(c)` |
+| **Is digit?** | `c.isdigit()` | `unicode.IsDigit(c)` |
+| **Is whitespace?** | `c.isspace()` | `unicode.IsSpace(c)` |
+| **Is uppercase?** | `c.isupper()` | `unicode.IsUpper(c)` |
+| **Is lowercase?** | `c.islower()` | `unicode.IsLower(c)` |
+| **To uppercase** | `c.upper()` | `unicode.ToUpper(c)` |
+| **To lowercase** | `c.lower()` | `unicode.ToLower(c)` |
+
+**Python:**
+```python
+text = "Hello123"
+for c in text:
+    if c.isalpha():
+        print(c.upper())
+    elif c.isdigit():
+        print(c)
+```
+
+**Go:**
+```go
+import (
+    "fmt"
+    "unicode"
+)
+
+text := "Hello123"
+for _, c := range text {
+    if unicode.IsLetter(c) {
+        fmt.Print(string(unicode.ToUpper(c)))
+    } else if unicode.IsDigit(c) {
+        fmt.Print(string(c))
+    }
+}
+```
+
+**Note:** Iterating over a string with `range` gives you `rune` values (Unicode code points), which is what the `unicode` functions expect.
+
 ---
 
 [← Previous: Functions](05-functions.md) | [Next: I/O Streams →](07-io-streams.md)
