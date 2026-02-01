@@ -73,25 +73,34 @@ file.WriteString("Hello, World!\n")
 
 ## Reading CSV Data
 
+**Sample file (`grades.csv`):**
+```
+Alice,Math,95
+Bob,English,87
+Charlie,Math,92
+```
+
 **Python:**
 ```python
-with open("data.csv", "r") as file:
+with open("grades.csv", "r") as file:
     for line in file:
         parts = line.strip().split(",")
         name = parts[0]
-        score = int(parts[1])
+        subject = parts[1]
+        score = int(parts[2])
 ```
 
 **Go:**
 ```go
 import (
     "bufio"
+    "fmt"
     "os"
     "strconv"
     "strings"
 )
 
-file, err := os.Open("data.csv")
+file, err := os.Open("grades.csv")
 if err != nil {
     return
 }
@@ -101,10 +110,13 @@ scanner := bufio.NewScanner(file)
 for scanner.Scan() {
     parts := strings.Split(scanner.Text(), ",")
     name := parts[0]
-    score, _ := strconv.Atoi(parts[1])
-    fmt.Printf("%s: %d\n", name, score)
+    subject := parts[1]
+    score, _ := strconv.Atoi(parts[2])
+    fmt.Printf("%s - %s: %d\n", name, subject, score)
 }
 ```
+
+Go's `strings.Split(",")` returns all parts at once, similar to Python.
 
 ## Using defer for Cleanup
 

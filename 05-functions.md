@@ -77,17 +77,51 @@ fmt.Println(c())  // 1
 fmt.Println(c())  // 2
 ```
 
-## Pointers for Modification
+## Pass by Value and Pointers
+
+In Python, the behavior depends on the type:
+- **Immutable types** (`int`, `str`, `tuple`): Changes inside a function don't affect the original
+- **Mutable types** (`list`, `dict`): Changes inside a function affect the original
+
+Go is **always pass-by-value**—everything is copied. To modify the original, you must explicitly use pointers:
 
 ```go
-func double(x *int) {
-    *x = *x * 2
+// Pass by value (copy) — changes stay inside the function
+func doubleByValue(x int) {
+    x = x * 2
+    fmt.Println("Inside function:", x)
 }
 
-num := 5
-double(&num)
-fmt.Println(num)  // 10
+// Pass by pointer — changes affect the caller
+func doubleByPointer(x *int) {
+    *x = *x * 2
+    fmt.Println("Inside function:", *x)
+}
+
+func main() {
+    a := 5
+    doubleByValue(a)
+    fmt.Println("After doubleByValue:", a)  // Still 5
+
+    b := 5
+    doubleByPointer(&b)
+    fmt.Println("After doubleByPointer:", b)  // Now 10
+}
 ```
+
+**Note:** Slices and maps appear to be passed by reference because they contain internal pointers, but technically the header is copied. For most purposes, modifications to slice/map contents affect the original.
+
+## The const Keyword
+
+Go's `const` is limited to compile-time constants—numbers, strings, and booleans only:
+
+```go
+const MaxSize = 100      // OK
+const Name = "Alice"     // OK
+const list = []int{1,2}  // Error! Slices can't be const
+```
+
+**Note:** Unlike C++, Go has no way to mark a function parameter as "read-only." If you pass a slice to a function, that function can always modify its contents.
 
 ---
 
