@@ -63,19 +63,48 @@ for name, score := range scores {
 
 ## Strings
 
+Go strings are immutable. Most operations are in the `strings` package.
+
+### String Basics
+
 | Concept | Python | Go |
 |---------|--------|-----|
 | **Length** | `len(s)` | `len(s)` |
-| **Contains** | `"x" in s` | `strings.Contains(s, "x")` |
+| **Concatenate** | `s1 + s2` | `s1 + s2` |
+| **Access char** | `s[0]` | `s[0]` (returns byte) |
+| **Uppercase** | `s.upper()` | `strings.ToUpper(s)` |
+| **Lowercase** | `s.lower()` | `strings.ToLower(s)` |
+| **Strip whitespace** | `s.strip()` | `strings.TrimSpace(s)` |
 | **Split** | `s.split(",")` | `strings.Split(s, ",")` |
-| **Upper** | `s.upper()` | `strings.ToUpper(s)` |
+| **Join** | `",".join(list)` | `strings.Join(slice, ",")` |
+
+### String Operations (Finding & Extracting)
+
+| Concept | Python | Go |
+|---------|--------|-----|
+| **Find** | `s.find("ell")` | `strings.Index(s, "ell")` |
+| **Find from end** | `s.rfind("l")` | `strings.LastIndex(s, "l")` |
+| **Substring** | `s[1:4]` | `s[1:4]` |
+| **Contains** | `"x" in s` | `strings.Contains(s, "x")` |
+| **Starts with** | `s.startswith("He")` | `strings.HasPrefix(s, "He")` |
+| **Ends with** | `s.endswith("!")` | `strings.HasSuffix(s, "!")` |
+
+### String Modifiers
+
+| Concept | Python | Go |
+|---------|--------|-----|
+| **Replace all** | `s.replace("o", "0")` | `strings.ReplaceAll(s, "o", "0")` |
+| **Replace n times** | N/A | `strings.Replace(s, "o", "0", n)` |
 
 ```go
 import "strings"
 
 text := "Hello, World!"
-fmt.Println(strings.Contains(text, "World"))
-fmt.Println(strings.ToUpper(text))
+fmt.Println(strings.Index(text, "World"))       // 7
+fmt.Println(strings.Contains(text, "World"))    // true
+fmt.Println(strings.HasPrefix(text, "Hello"))   // true
+fmt.Println(strings.ReplaceAll(text, "o", "0")) // Hell0, W0rld!
+fmt.Println(text[0:5])                          // Hello
 ```
 
 ## Character Functions
