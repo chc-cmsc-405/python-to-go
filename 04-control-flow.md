@@ -39,6 +39,18 @@ if err := doSomething(); err != nil {
 
 ## Switch
 
+**Python (3.10+):**
+```python
+match grade:
+    case 'A':
+        print("Excellent")
+    case 'B' | 'C':
+        print("Good")
+    case _:
+        print("Unknown")
+```
+
+**Go:**
 ```go
 switch grade {
 case 'A':
@@ -48,8 +60,14 @@ case 'B', 'C':
 default:
     fmt.Println("Unknown")
 }
+```
 
-// Switch with no expression
+**Key differences from Python's `match`:**
+- No `break` needed—Go doesn't fall through by default
+- Multiple values use comma: `case 'B', 'C':` instead of `case 'B' | 'C':`
+- Go switch can work without an expression (acts like if/elif):
+
+```go
 switch {
 case x > 0:
     fmt.Println("Positive")
