@@ -14,8 +14,6 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 | [02-data-types](02-data-types.md) | All | int, float64, string, bool, type conversion |
 | [03-operators](03-operators.md) | All | Arithmetic, comparison, logical (&&, \|\|, !) |
 
-**Time estimate:** ~20 minutes
-
 **Key takeaways:**
 - Use `:=` for short variable declaration (type inferred)
 - Use `var x int` for explicit type declaration
@@ -34,8 +32,6 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 |------|----------|--------------|
 | [04-control-flow](04-control-flow.md) | All | if/else, for loops, range |
 | [05-data-structures](05-data-structures.md) | All | Slices, maps, strings, file I/O |
-
-**Time estimate:** ~25 minutes
 
 **Key takeaways:**
 - Slices (`[]int`) are like Python lists but single-typed
@@ -57,8 +53,6 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 | [06-functions](06-functions.md) | All | Functions, multiple returns, error handling |
 | [07-structs-interfaces](07-structs-interfaces.md) | All | Structs, methods, receivers, interfaces |
 
-**Time estimate:** ~25 minutes
-
 **Key takeaways:**
 - Go has no classes — use structs + methods instead
 - Methods have receivers: `func (d Dog) Bark()`
@@ -76,8 +70,6 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 | Read | Sections | Key Concepts |
 |------|----------|--------------|
 | [08-unique-features](08-unique-features.md) | All | Goroutines, channels, defer, error handling |
-
-**Time estimate:** ~20 minutes
 
 **Key takeaways:**
 - `go function()` launches a goroutine (lightweight thread)
