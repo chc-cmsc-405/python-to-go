@@ -31,7 +31,9 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 | Read | Sections | Key Concepts |
 |------|----------|--------------|
 | [04-control-flow](04-control-flow.md) | All | if/else, for loops, range |
-| [05-data-structures](05-data-structures.md) | All | Slices, maps, strings, file I/O |
+| [05-functions](05-functions.md) | All | Functions, multiple returns, error handling |
+| [06-data-structures](06-data-structures.md) | All | Slices, maps, strings |
+| [07-io-streams](07-io-streams.md) | All | File I/O, bufio.Scanner, defer |
 
 **Key takeaways:**
 - Slices (`[]int`) are like Python lists but single-typed
@@ -44,14 +46,13 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 ---
 
-## Phase 3: Structs & Methods (Session 5-7)
+## Phase 3: Custom Types (Session 5-7)
 
 **Topics:** Structs, methods, interfaces
 
 | Read | Sections | Key Concepts |
 |------|----------|--------------|
-| [06-functions](06-functions.md) | All | Functions, multiple returns, error handling |
-| [07-structs-interfaces](07-structs-interfaces.md) | All | Structs, methods, receivers, interfaces |
+| [08-custom-types](08-custom-types.md) | All | Structs, methods, receivers, interfaces |
 
 **Key takeaways:**
 - Go has no classes — use structs + methods instead
@@ -69,7 +70,7 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 | Read | Sections | Key Concepts |
 |------|----------|--------------|
-| [08-unique-features](08-unique-features.md) | All | Goroutines, channels, defer, error handling |
+| [09-unique-features](09-unique-features.md) | All | Goroutines, channels, defer, error handling |
 
 **Key takeaways:**
 - `go function()` launches a goroutine (lightweight thread)
@@ -86,9 +87,9 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 | Phase | Session | Read Before Class |
 |-------|---------|-------------------|
 | 1 | S1 (Wed) | 01-basics, 02-data-types, 03-operators |
-| 2 | S3 (Mon) | 04-control-flow, 05-data-structures |
-| 3 | S5 (Mon) | 06-functions, 07-structs-interfaces |
-| 4 | S8 (Wed) | 08-unique-features |
+| 2 | S3 (Mon) | 04-control-flow, 05-functions, 06-data-structures, 07-io-streams |
+| 3 | S5 (Mon) | 08-custom-types |
+| 4 | S8 (Wed) | 09-unique-features |
 
 ---
 
@@ -98,11 +99,12 @@ For complete coverage or later review, all sections are available:
 
 | Guide | Topics |
 |-------|--------|
-| [01-basics](01-basics.md) | Hello World, I/O, variables, constants |
+| [01-basics](01-basics.md) | Hello World, console I/O, variables, constants |
 | [02-data-types](02-data-types.md) | Types, zero values, type conversion |
 | [03-operators](03-operators.md) | Arithmetic, comparison, logical |
 | [04-control-flow](04-control-flow.md) | If/else, for, switch, range |
-| [05-data-structures](05-data-structures.md) | Slices, maps, strings, file I/O |
-| [06-functions](06-functions.md) | Functions, multiple returns, variadic |
-| [07-structs-interfaces](07-structs-interfaces.md) | Structs, methods, interfaces, composition |
-| [08-unique-features](08-unique-features.md) | Goroutines, channels, defer, errors |
+| [05-functions](05-functions.md) | Functions, multiple returns, variadic |
+| [06-data-structures](06-data-structures.md) | Slices, maps, strings |
+| [07-io-streams](07-io-streams.md) | File I/O, bufio.Scanner, defer |
+| [08-custom-types](08-custom-types.md) | Structs, methods, interfaces, composition |
+| [09-unique-features](09-unique-features.md) | Goroutines, channels, defer, errors |

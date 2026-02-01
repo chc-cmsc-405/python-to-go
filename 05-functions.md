@@ -1,4 +1,4 @@
-# 06 - Functions
+# 05 - Functions
 
 [← Back to Go Guide](README.md)
 
@@ -91,4 +91,4 @@ fmt.Println(num)  // 10
 
 ---
 
-[← Previous: Data Structures](05-data-structures.md) | [Next: Structs & Interfaces →](07-structs-interfaces.md)
+[← Previous: Control Flow](04-control-flow.md) | [Next: Data Structures →](06-data-structures.md)

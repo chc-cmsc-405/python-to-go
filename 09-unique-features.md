@@ -1,4 +1,4 @@
-# 08 - Go Unique Features
+# 09 - Go Unique Features
 
 [← Back to Go Guide](README.md)
 
@@ -176,4 +176,4 @@ func PublicFunc() {}        // Public
 
 ---
 
-[← Previous: Structs & Interfaces](07-structs-interfaces.md) | [Back to Go Guide](README.md)
+[← Previous: Custom Types](08-custom-types.md) | [Back to Go Guide](README.md)

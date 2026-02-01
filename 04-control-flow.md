@@ -108,4 +108,4 @@ for i := 0; i < 10; i++ {
 
 ---
 
-[← Previous: Operators](03-operators.md) | [Next: Data Structures →](05-data-structures.md)
+[← Previous: Operators](03-operators.md) | [Next: Functions →](05-functions.md)

@@ -37,7 +37,7 @@ func main() {
 - `func main()` is the entry point
 - No semicolons needed
 
-## Output
+## Console Output
 
 | Python | Go |
 |--------|-----|
@@ -54,9 +54,9 @@ fmt.Printf("Float: %.2f\n", pi)      // Float with 2 decimals
 fmt.Printf("Any type: %v\n", x)      // Default format
 ```
 
-## Input
+## Console Input
 
-Go uses `fmt.Scan` for input:
+Go uses `fmt.Scan` for console input:
 
 **Python:**
 ```python
