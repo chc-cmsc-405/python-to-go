@@ -1,10 +1,10 @@
 # Go Reading Guide by Phase
 
-This guide maps the Python-to-Go reference materials to the course phases. Read the assigned sections **before** watching the async videos—they'll provide context and help you recognize familiar patterns.
+This guide maps the Python-to-Go reference materials to each phase. Read the assigned sections **before** watching the videos — they'll provide context and help you recognize familiar patterns.
 
 ---
 
-## Phase 1: Basics (Session 1 Async)
+## Phase 1: Basics
 
 **Topics:** Variables, types, I/O, operators
 
@@ -24,7 +24,7 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 ---
 
-## Phase 2: Collections (Session 3-4)
+## Phase 2: Collections
 
 **Topics:** Slices, maps, iteration, file I/O
 
@@ -46,7 +46,7 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 ---
 
-## Phase 3: Custom Types (Session 5-7)
+## Phase 3: Custom Types
 
 **Topics:** Structs, methods, interfaces
 
@@ -64,7 +64,7 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 ---
 
-## Phase 4: Unique Features (Session 8)
+## Phase 4: Unique Features
 
 **Topics:** Goroutines, channels, concurrency
 
@@ -84,12 +84,12 @@ This guide maps the Python-to-Go reference materials to the course phases. Read 
 
 ## Quick Reference: What to Read When
 
-| Phase | Session | Read Before Class |
-|-------|---------|-------------------|
-| 1 | S1 (Wed) | 01-basics, 02-data-types, 03-operators |
-| 2 | S3 (Mon) | 04-control-flow, 05-functions, 06-data-structures, 07-io-streams |
-| 3 | S5 (Mon) | 08-custom-types |
-| 4 | S8 (Wed) | 09-unique-features |
+| Phase | Read |
+|-------|------|
+| 1: Basics | 01-basics, 02-data-types, 03-operators |
+| 2: Collections | 04-control-flow, 05-functions, 06-data-structures, 07-io-streams |
+| 3: Custom Types | 08-custom-types |
+| 4: Unique Features | 09-unique-features |
 
 ---
 
