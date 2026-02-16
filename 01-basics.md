@@ -123,6 +123,22 @@ const (
 )
 ```
 
+## Package Visibility
+
+Capitalization controls visibility in Go — no keywords like `public` or `private`:
+
+```go
+package mypackage
+
+var publicVar = "visible"   // Lowercase = private to package
+var PublicVar = "VISIBLE"   // Uppercase = public (exported)
+
+func privateFunc() {}       // Private to package
+func PublicFunc() {}        // Public (exported)
+```
+
+This applies to everything: variables, functions, struct fields, methods.
+
 ---
 
 [Next: Data Types →](02-data-types.md)

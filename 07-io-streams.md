@@ -4,6 +4,17 @@
 
 Go provides file operations through the `os` and `bufio` packages. Error handling is explicit—functions return both a result and an error. This section covers file I/O—for console I/O (`fmt.Scan`), see [01-basics](01-basics.md).
 
+## Contents
+
+- [Reading a File](#reading-a-file)
+- [Writing to a File](#writing-to-a-file)
+- [Common File Operations](#common-file-operations)
+- [Reading CSV Data](#reading-csv-data)
+- [Using defer for Cleanup](#using-defer-for-cleanup)
+- [Error Handling Pattern](#error-handling-pattern)
+- [Reading Entire File](#reading-entire-file)
+- [Common I/O Packages](#common-io-packages)
+
 ---
 
 ## Reading a File

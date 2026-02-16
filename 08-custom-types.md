@@ -4,6 +4,16 @@
 
 Go doesn't have classes—it uses **structs** for data and **methods** attached to them. Instead of inheritance, Go uses **composition** and **interfaces**.
 
+## Contents
+
+- [Structs](#structs)
+- [Methods](#methods)
+- [Constructor Functions](#constructor-functions)
+- [Composition](#composition-instead-of-inheritance)
+- [Interfaces](#interfaces)
+- [Destructors: Not Needed](#destructors-not-needed)
+- [Empty Interface](#empty-interface)
+
 ---
 
 ## Structs
@@ -93,6 +103,20 @@ func MakeSpeak(s Speaker) {
 
 MakeSpeak(Dog{})  // Works
 MakeSpeak(Cat{})  // Works
+```
+
+## Destructors: Not Needed
+
+C++ requires destructors to free memory manually. Go doesn't — the garbage collector handles all cleanup automatically. There is no `~ClassName()` equivalent.
+
+For resources like file handles, use `defer` to ensure cleanup:
+
+```go
+f, err := os.Open("data.txt")
+if err != nil {
+    return err
+}
+defer f.Close()  // Runs when function returns
 ```
 
 ## Empty Interface

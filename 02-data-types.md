@@ -4,6 +4,15 @@
 
 Go is statically typed—every variable has a fixed type. However, Go has excellent type inference with `:=`. Every type has a "zero value" that variables default to if not initialized.
 
+## Contents
+
+- [Basic Types](#basic-types)
+- [Zero Values](#zero-values)
+- [Strings](#strings)
+- [Character Functions](#character-functions)
+- [Type Conversions](#type-conversions)
+- [Nil](#nil)
+
 ---
 
 ## Basic Types

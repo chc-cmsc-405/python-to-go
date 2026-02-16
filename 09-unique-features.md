@@ -4,6 +4,15 @@
 
 These concepts don't have direct Python equivalents. Go has built-in concurrency with goroutines and channels, explicit error handling via return values, and `defer` for cleanup.
 
+## Contents
+
+- [Goroutines](#goroutines-lightweight-concurrency)
+- [Channels](#channels-communication)
+- [Error Handling](#error-handling)
+- [Defer](#defer)
+- [Panic and Recover](#panic-and-recover)
+- [Memory Management: Python vs Go](#memory-management-python-vs-go)
+
 ---
 
 ## Goroutines (Lightweight Concurrency)
@@ -150,20 +159,6 @@ Both use garbage collection:
 | **GC type** | Reference counting + cycle detection | Concurrent, tri-color mark-and-sweep |
 | **Manual control** | None | None (some tuning available) |
 | **Memory leaks** | Rare | Rare |
-
-## Package Visibility
-
-Capitalization controls visibility:
-
-```go
-package mypackage
-
-var publicVar = "visible"   // Lowercase = private
-var PublicVar = "VISIBLE"   // Uppercase = public
-
-func privateFunc() {}       // Private
-func PublicFunc() {}        // Public
-```
 
 ## Key Differences Summary
 
